@@ -1,0 +1,40 @@
+.home-main-container {
+  background: rgba(18, 18, 26, 1);
+  height: 100%;
+  width: 100%;
+  color: #aaaaaf;
+}
+.home-main-container div {
+  position: relative;
+  display: inline-block;
+  /* margin-right: 25px; */
+  vertical-align: middle;
+  text-shadow: 0px 5px 10px rgb(0 0 0);
+}
+.home-main-container h2 {
+  font-weight: 300;
+  letter-spacing: 0.07em;
+}
+.home-main-container span:first-child {
+  font-size: 3em;
+  margin-left: 20px;
+}
+.home-main-container span:nth-child(2) {
+  font-size: 2em;
+  margin-left: -0.2em;
+  font-weight: 400;
+}
+.home-main-container h5 {
+  margin-top: -20px;
+  font-weight: 400;
+  letter-spacing: 1.5em;
+  margin-left: 40px;
+}
+.home-main-container .logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: 100%;
+  background-position: 50% 50%;
+  box-shadow: 0px 0px 20px -10px rgb(0 0 0 / 50%);
+}

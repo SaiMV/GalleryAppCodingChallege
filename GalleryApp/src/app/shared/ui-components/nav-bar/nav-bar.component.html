@@ -1,0 +1,37 @@
+<nav class="nav-bar">
+  <div class="nav-wrapper">
+    <div class="nav-mobile-menu-container">
+      <icons-list
+        [iconWidth]="30"
+        [iconHeight]="30"
+        [iconMargin]="8"
+        fillColor="white"
+        strokeColor="black"
+        iconName="dotted-menu"
+      ></icons-list>
+    </div>
+    <div class="nav-logo-container" routerLink="/home"><app-icon></app-icon></div>
+    <div class="nav-desktop-menu-container">
+      <div class="nav-menu" *ngIf="showNavMenuBar">
+        <div class="nav-link-container">
+          <a class="nav-link nav-link-text" routerLink="/home">Home</a>
+        </div>
+      </div>
+      <div class="nav-menu" *ngIf="showNavMenuBar">
+        <div class="nav-link-container">
+          <a class="nav-link nav-link-text" routerLink="/gallery">Gallery</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-user-profile-menu-container" routerLink="/login">
+      <icons-list
+        [iconWidth]="35"
+        [iconHeight]="35"
+        [iconMargin]="7"
+        fillColor="white"
+        strokeColor="black"
+        iconName="user-profile"
+      ></icons-list>
+    </div>
+  </div>
+</nav>

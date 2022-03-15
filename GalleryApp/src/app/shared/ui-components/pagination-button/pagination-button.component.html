@@ -1,0 +1,19 @@
+<div class="pagintion-button-container">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" (click)="previousPage()">
+        <a class="page-link">Previous</a>
+      </li>
+      <li
+        class="page-item"
+        (click)="selectPage(key)"
+        *ngFor="let key of paginations | createPaginations; let i = index"
+      >
+        <a class="page-link" [ngClass]="currentPageSelected === (i+1) ? 'active': ''">{{ key }}</a>
+      </li>
+      <li class="page-item" (click)="nextPage()">
+        <a class="page-link">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,19 @@
+<div class="login-main-container">
+  <div class="login-container">
+    <div id="form">
+      <h1>LOGIN</h1>
+      <div>
+        <label>Username</label>
+        <input-box [placeHolder]="'Enter Username'"></input-box>
+      </div>
+      <div>
+        <label>Password</label>
+        <input-box
+          [type]="'password'"
+          [placeHolder]="'Enter password'"
+        ></input-box>
+      </div>
+      <input type="submit" name="login" value="LOGIN" (click)="login()" />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+.main-scroll-container {
+  height: calc(100% - 34px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.alert-message-container {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  z-index: 1000;
+}

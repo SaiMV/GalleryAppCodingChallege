@@ -1,0 +1,124 @@
+.nav-bar {
+  width: 100%;
+  z-index: 2;
+  background-color: #080808 !important;
+  max-height: 75px;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-wrapper {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-container {
+  height: 50px;
+  width: 120px;
+  padding-left:20px;
+}
+
+.nav-desktop-menu-container {
+  height: 50px;
+  flex-basis: 1;
+  flex-grow: 1;
+}
+
+.nav-search-bar-container {
+  height: 50px;
+  width: 50px;
+}
+.nav-user-profile-menu-container,
+.nav-mobile-menu-container {
+  height: 50px;
+  width: 50px;
+}
+
+.nav-user-profile-menu-container icon {
+  display: block;
+}
+.nav-menu {
+  color: rgba(255, 255, 255, 0.5);
+  display: inline-flex;
+  position: relative;
+  padding: 5px 10px;
+}
+
+.navbar-nav .dropdown-menu {
+  position: static;
+  float: none;
+}
+
+.nav-menu:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  min-width: -webkit-fill-available;
+  margin: 0px 9px;
+}
+
+.nav-menu:hover .dropdown-menu .dropdown-item:hover {
+  display: flex;
+  background-color: #022347;
+  color: white;
+  padding: 8px 10px;
+  margin: 0px;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  padding: 10px;
+  border: 0;
+  color: white;
+  margin-top: 4px;transition: 0.3s;
+}
+
+.nav-link-container {
+  display: flex;transition: .7s;
+}
+
+.nav-menu:hover .nav-link-container {
+  background-color: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.nav-menu:hover .nav-link-text {
+  color: #212529 !important;
+}
+
+.nav-menu:hover .nav-link {
+  color: #797c80;
+}
+
+.nav-mobile-menu-container {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-mobile-menu-container {
+    display: inline-block;
+  }
+  .nav-desktop-menu-container .nav-menu {
+    display: none;
+  }
+  .nav-logo-container {
+    padding-left:0px;
+  }
+}

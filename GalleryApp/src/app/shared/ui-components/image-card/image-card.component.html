@@ -1,0 +1,16 @@
+<div class="card">
+  <img
+    [src]="cardData?.download_url | optimizeImage: 200:300"
+    class="card-image"
+    alt="..."
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ cardData?.id }}</h5>
+    <p class="card-text">
+      {{ cardData?.author }}
+    </p>
+  </div>
+  <div class="card-overlay">
+    <button class="download-button">Download</button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div
+  class="error-container normal"
+  [ngClass]="errorType"
+  *ngIf="showAlertMessage"
+>
+  <div class="icon-container">
+    <icons-list
+      iconName="info"
+      *ngIf="errorType !== 'normal'"
+      strokeColor="white"
+    ></icons-list>
+    <icons-list
+      iconName="info"
+      *ngIf="errorType == 'normal'"
+      strokeColor="black"
+    ></icons-list>
+  </div>
+  <div class="error-message-container">
+    {{ alertMessage }}
+  </div>
+  <div
+    (click)="closeAlert()"
+    class="icon-container"
+    *ngIf="errorType !== 'normal'"
+  >
+    <icons-list iconName="close" fillColor="white"></icons-list>
+  </div>
+</div>

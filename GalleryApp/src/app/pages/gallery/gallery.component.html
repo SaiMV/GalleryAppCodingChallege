@@ -1,0 +1,12 @@
+<div class="main-container">
+  <div class="pagination-container">
+    <pagination-button-stack [paginations] = "5"
+      (selectedPage)="getDataForSelectedPage($event)"
+    ></pagination-button-stack>
+  </div>
+  <div class="card-list-area"
+    *ngFor="let item of imageListData; let index = index; trackBy: trackByFn"
+  >
+    <image-card [cardData]="item"></image-card>
+  </div>
+</div>
