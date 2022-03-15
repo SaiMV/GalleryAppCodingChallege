@@ -7,6 +7,4 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ImageCardComponent {
   @Input() cardData: any;
-
-  ngOnInit(): void {}
 }

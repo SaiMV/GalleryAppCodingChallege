@@ -8,7 +8,11 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   constructor(private router: Router) {}
-
+  
+  /**
+   * login: method is used to sent request to server side. 
+   * And once the validation is succes it navigates to home screen.
+   */
   login() {
     this.router.navigate(['/home']);
   }

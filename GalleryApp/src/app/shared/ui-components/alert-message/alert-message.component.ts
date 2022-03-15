@@ -33,6 +33,9 @@ export class AlertMessageComponent implements OnDestroy {
 
   constructor(private alertMessageService: AlertMessageService) {}
 
+  /**
+   * ngOnDestroy: unsubscribe the alertMessageService observer
+   */
   ngOnDestroy(): void {
     this.alertSubscription?.unsubscribe();
   }

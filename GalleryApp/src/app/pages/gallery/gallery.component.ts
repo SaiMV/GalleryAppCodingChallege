@@ -17,6 +17,13 @@ export class GalleryComponent implements OnDestroy {
     private alertMessageService: AlertMessageService
   ) {}
 
+   /**
+   * getDataForSelectedPage: calls ImageGalleryService getImageListByIndex 
+   * to sent request to server side if no data is fetched from the server side.
+   *  If data already exist in store for the page,it will take from the store. 
+   * For a new page data request once the data recieves from server
+   * side it will be stored in the application state.
+   */
   getDataForSelectedPage(page: number) {
     this.observerInstance = this.imageGalleryService
       .getImageListByIndex(page, 20)
@@ -37,10 +44,17 @@ export class GalleryComponent implements OnDestroy {
       );
   }
 
+  /**
+   * trackByFn: to improve the performance of application in each data load 
+   * dom population is handled with index created for cards.
+   */
   trackByFn(index: number) {
     return index;
   }
 
+  /**
+   * ngOnDestroy: unsubscribe observerInstance and other valiables
+   */
   ngOnDestroy(): void {
     if (this.observerInstance) {
       this.observerInstance.unsubscribe();

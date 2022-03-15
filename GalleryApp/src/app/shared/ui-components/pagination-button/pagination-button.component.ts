@@ -10,15 +10,29 @@ export class PaginationButtonComponent implements OnInit {
   @Input() paginations: number = 5;
   currentPageSelected: number = 1;
 
+  /**
+   * ngOnInit: Emit first page index. It may be help ful to set values
+   *  or to fetch data from server
+   */
   ngOnInit(): void {
     this.selectedPage.emit(this.currentPageSelected);
   }
 
+  /**
+   * selectPage: Emit selected page index. It may be
+   *  help ful to set values or fetch data from server. 
+   * current page selected will be kept for previous and next button
+   * actions.
+   */
   selectPage(page: number): void {
     this.selectedPage.emit(page);
     this.currentPageSelected = page;
   }
 
+  /**
+   * previousPage: method decrement the current selected value  by 1 unti c
+   * urrent selected value reaches 1 by each 
+   */
   previousPage(): void {
     let lastPageSelected = this.currentPageSelected;
     this.currentPageSelected =
@@ -28,6 +42,10 @@ export class PaginationButtonComponent implements OnInit {
     }
   }
 
+  /**
+   * previousPage: method decrement the current selected value  by 1 unti c
+   * urrent selected value reaches maximum pagination index by each 
+   */
   nextPage(): void {
     let lastPageSelected = this.currentPageSelected;
     this.currentPageSelected =

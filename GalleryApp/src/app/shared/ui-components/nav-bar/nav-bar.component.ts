@@ -9,6 +9,9 @@ import { NavigationEnd, Router } from '@angular/router';
 export class NavBarComponent {
   showNavMenuBar: boolean = true;
 
+  /**
+   * constructor handles routing events to remove menu items form the login screen
+   */
   constructor(private router: Router) {
     this.router.events?.subscribe((event: any) => {
       if (event instanceof NavigationEnd) {
