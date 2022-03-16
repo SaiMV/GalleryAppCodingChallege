@@ -8,6 +8,8 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class NavBarComponent {
   showNavMenuBar: boolean = true;
+  openNavBar: boolean = true;
+  openSlider: any;
 
   /**
    * constructor handles routing events to remove menu items form the login screen
@@ -22,5 +24,18 @@ export class NavBarComponent {
         }
       }
     });
+  }
+
+  openOrCloseNavBar(close: boolean) {
+    this.openNavBar = close;
+    this.openSlider = close;
+  }
+
+  getClass() {
+    if (this.openSlider === undefined) {
+      return 'set-left';
+    } else {
+      return this.openSlider ? 'move-to-right' : 'move-to-left';
+    }
   }
 }

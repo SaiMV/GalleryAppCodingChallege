@@ -1,6 +1,6 @@
 <nav class="nav-bar">
   <div class="nav-wrapper">
-    <div class="nav-mobile-menu-container">
+    <div class="nav-mobile-menu-container" (click)="openSlider = !openSlider">
       <icons-list
         [iconWidth]="30"
         [iconHeight]="30"
@@ -10,7 +10,9 @@
         iconName="dotted-menu"
       ></icons-list>
     </div>
-    <div class="nav-logo-container" routerLink="/home"><app-icon></app-icon></div>
+    <div class="nav-logo-container" routerLink="/home">
+      <app-icon></app-icon>
+    </div>
     <div class="nav-desktop-menu-container">
       <div class="nav-menu" *ngIf="showNavMenuBar">
         <div class="nav-link-container">
@@ -35,3 +37,12 @@
     </div>
   </div>
 </nav>
+<div
+  class="main-container-left"
+  [ngClass]="getClass()"
+  style="position: absolute; z-index: 2000000"
+>
+  <a routerLink="/home" (click)="openSlider = !openSlider">Home</a>
+  <a routerLink="/gallery" (click)="openSlider = !openSlider">Gallery</a>
+  <a routerLink="/login" (click)="openSlider = !openSlider">Logout</a>
+</div>
